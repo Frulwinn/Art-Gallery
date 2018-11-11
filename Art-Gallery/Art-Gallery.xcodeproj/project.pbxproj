@@ -63,11 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				48B32BDC21965B55000E6583 /* AppDelegate.swift */,
+				48B32BF421966134000E6583 /* PaintingTableViewCellDelegate.swift */,
+				48B32BF221966118000E6583 /* Painting.swift */,
+				48B32BF621966148000E6583 /* PaintingModel.swift */,
 				48B32BDE21965B55000E6583 /* PaintingViewController.swift */,
 				48B32BF021965E5C000E6583 /* PaintingTableViewCell.swift */,
-				48B32BF221966118000E6583 /* Painting.swift */,
-				48B32BF421966134000E6583 /* PaintingTableViewCellDelegate.swift */,
-				48B32BF621966148000E6583 /* PaintingModel.swift */,
 				48B32BE021965B55000E6583 /* Main.storyboard */,
 				48B32BE321965B56000E6583 /* Assets.xcassets */,
 				48B32BE521965B56000E6583 /* LaunchScreen.storyboard */,

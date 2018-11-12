@@ -19,26 +19,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QIU-wP-LOr">
-                                <rect key="frame" x="20" y="116" width="335" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="xDR-FU-eUG" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="289" id="xDR-FU-eUG" customClass="PaintingTableViewCell" customModule="Art_Gallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="289"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xDR-FU-eUG" id="4aY-J5-c0q">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="288.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Baw-wJ-nBU">
+                                                    <rect key="frame" x="20" y="8" width="335" height="256"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="48M-LI-aai">
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="206"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT0-oJ-wI6">
+                                                            <rect key="frame" x="144.5" y="226" width="46" height="30"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="isLike:" destination="xDR-FU-eUG" eventType="touchUpInside" id="gnO-Co-bWb"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="256" id="esD-EK-YoT"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Baw-wJ-nBU" secondAttribute="trailing" constant="20" id="7dt-DX-gLU"/>
+                                                <constraint firstItem="Baw-wJ-nBU" firstAttribute="leading" secondItem="4aY-J5-c0q" secondAttribute="leading" constant="20" id="8Hh-cm-3zu"/>
+                                                <constraint firstItem="Baw-wJ-nBU" firstAttribute="top" secondItem="4aY-J5-c0q" secondAttribute="top" constant="8" id="mRN-m8-iLV"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="view" destination="48M-LI-aai" id="2Aa-KB-bB4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QIU-wP-LOr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Tb-MJ-7e3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QIU-wP-LOr" secondAttribute="trailing" constant="20" id="VX2-zB-GUi"/>
-                            <constraint firstItem="QIU-wP-LOr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b29-Rx-ADJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QIU-wP-LOr" secondAttribute="bottom" id="loL-dj-8Qx"/>
+                            <constraint firstItem="QIU-wP-LOr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Fw-1I-RgM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QIU-wP-LOr" secondAttribute="trailing" id="9EM-HP-yRt"/>
+                            <constraint firstItem="QIU-wP-LOr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="K1V-un-uRH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QIU-wP-LOr" secondAttribute="bottom" id="Z1E-Q5-a3j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -48,6 +76,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="xXM-rT-U3i" customClass="PaintingModel" customModule="Art_Gallery" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1076" y="99.400299850074973"/>
         </scene>

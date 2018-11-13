@@ -29,6 +29,13 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         
         paintings[indexPath.row].isLiked.toggle()
         
+        var newButtonTitle: String
+        if paintings[indexPath.row].isLiked {
+            newButtonTitle = "👎🏽"
+        } else {
+            newButtonTitle = "👍🏽"
+        }
+        cell.likeButton.setTitle(newButtonTitle, for: .normal)
     }
     
     //table view functions

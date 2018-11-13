@@ -23,6 +23,14 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         tableView?.reloadData()
 }
     
+    func tappedLikeButton(on cell: PaintingTableViewCell) {
+        guard let indexPath = tableView?.indexPath(for: cell)
+            else { fatalError("Non cell!") }
+        
+        paintings[indexPath.row].isLiked.toggle()
+        
+    }
+    
     //table view functions
     func numberOfSections(in tableView: UITableView) -> Int {
         self.tableView = tableView
@@ -39,18 +47,10 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
         
         cell.delegate = self
         cell.view.image = paintings[indexPath.row].image
-       // let image orientation = portraitView //adding the painting image to the portraitView
         let title = "👍🏽"
         cell.likeButton?.setTitle(title, for: .normal)
+        cell.likeButton.alpha = paintings[indexPath.row].isLiked ? 1.0 : 0.5
         
         return cell
-    }
-    
-    func tappedLikeButton(on cell: PaintingTableViewCell) {
-        guard let indexPath = tableView?.indexPath(for: cell)
-            else { fatalError("Non cell!") }
-        
-        paintings[indexPath.row].isLiked.toggle()
-
     }
 }
